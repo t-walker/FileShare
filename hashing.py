@@ -24,7 +24,7 @@ def directory_2_hash(path):
 
 def send_hash(file_hash):
     return 0
-    
-def check_hash(hash_1, hash_2)
+
+def check_hash(hash_1, hash_2):
     return 0
     
