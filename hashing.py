@@ -1,7 +1,10 @@
 __author__ = 'Tyler'
 
+import logging
 from hashlib import md5
 from os import listdir
+
+logging.basicConfig(filename="example.log", level=logging.DEBUG)
 
 
 def file_2_hash(file):
@@ -22,11 +25,16 @@ def directory_2_hash(path):
     @type path: string
     :rtype: list
     """
+    file_directory = []
     hashed_directory = []
 
-    for file in listdir(path):
+    raw_directory = listdir(path)
+    raw_directory.sort()
+
+    for file in raw_directory:
         try:
             hashed_directory.append(file_2_hash(file))
+            file_directory.append(file)
         except PermissionError:
-            print("[-] ERROR: Cannot access:", file)
-    return hashed_directory
+            logging.info("[WARNING] ERROR: Cannot access: " + file)
+    return file_directory, hashed_directory

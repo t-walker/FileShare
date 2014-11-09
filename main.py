@@ -13,7 +13,7 @@ def main():
 
     directory_hash = directory_2_hash(directory_1)
 
-    for file in directory_hash:
+    for file in directory_hash[0]:
         print(file)
 
     return 0
