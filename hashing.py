@@ -4,7 +4,7 @@ import logging
 from hashlib import md5
 from os import listdir
 
-logging.basicConfig(filename="example.log", level=logging.DEBUG)
+logging.basicConfig(filename="hashing.log", level=logging.DEBUG)
 
 
 def file_2_hash(file):
