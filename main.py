@@ -10,11 +10,12 @@ def main():
     directory_1 = os.getcwd()
     print("File 1:", file_2_hash(file_1))
     print("File 2:", file_2_hash(file_2))
+    print()
 
     directory_hash = directory_2_hash(directory_1)
 
-    for file in directory_hash[0]:
-        print(file)
+    for i in range(len(directory_hash[0])):
+        print("File:", directory_hash[0][i], "Hash:", directory_hash[1][i])
 
     return 0
 
