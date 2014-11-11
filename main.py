@@ -12,11 +12,14 @@ def main():
     print("File 2:", file_2, "Hash: ", file_2_hash(file_2))
     print()
 
-    directory_hash = directory_2_hash(directory_1)
+    directory_names, directory_hash = directory_2_hash(directory_1)
     
-    local_dict = file_hash_dict(directory_hash[0], directory_hash[1])
+    local_dict = file_hash_DICT(directory_names, directory_hash)
+
+    for i in directory_names:
+	print "File: ", i, "\t Hash: ", local_dict[i]
      
-    print(local_dict)
+    
     
     return 0
 
