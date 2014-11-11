@@ -2,7 +2,7 @@ __author__ = 'Tyler'
 
 import os
 from hashing import file_2_hash, directory_2_hash
-
+from filechange import file_hash_DICT
 
 def main():
     file_1 = "test.txt"
@@ -13,10 +13,11 @@ def main():
     print()
 
     directory_hash = directory_2_hash(directory_1)
-
-    for i in range(len(directory_hash[0])):
-        print("File:", directory_hash[0][i], "Hash:", directory_hash[1][i])
-
+    
+    local_dict = file_hash_dict(directory_hash[0], directory_hash[1])
+     
+    print(local_dict)
+    
     return 0
 
 if __name__ == "__main__":
