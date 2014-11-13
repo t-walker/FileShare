@@ -37,4 +37,7 @@ def directory_2_hash(path):
             file_directory.append(file)
         except PermissionError:
             logging.info("[WARNING] ERROR: Cannot access: " + file)
+        except IsADirectoryError:
+            logging.info("[WARNING] ERROR: Directory: " + file)
+            
     return file_directory, hashed_directory

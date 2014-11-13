@@ -17,10 +17,8 @@ def main():
     local_dict = file_hash_DICT(directory_names, directory_hash)
 
     for i in directory_names:
-	print "File: ", i, "\t Hash: ", local_dict[i]
-     
-    
-    
+	    print("File: ", i, "\t Hash: ", local_dict[i])
+
     return 0
 
 if __name__ == "__main__":
