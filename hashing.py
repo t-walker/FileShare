@@ -1,8 +1,9 @@
 __author__ = 'Tyler'
 
+from os import listdir
 import logging
 from hashlib import md5
-from os import listdir
+
 
 logging.basicConfig(filename="hashing.log", level=logging.DEBUG)
 
