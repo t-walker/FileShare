@@ -1,0 +1,4 @@
+Local Directory ~ C:/Users/Tyler/Desktop/FS1
+Network Address ~ 192.168.1.4
+Network Port ~ 6969
+User ~ twalker
